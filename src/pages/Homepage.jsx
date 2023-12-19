@@ -26,7 +26,7 @@ function Homepage() {
 							Enjoy top quality experiences everytime you visit!
 						</p>
 						<div className="lineSeparator">♦</div>
-						<Link to="" className="cta">
+						<Link to="/appointments" className="cta">
 							Book Appointment
 						</Link>
 					</section>
