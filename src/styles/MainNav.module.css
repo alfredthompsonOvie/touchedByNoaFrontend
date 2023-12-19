@@ -7,14 +7,16 @@
   top: 5em;
   right: -100%;
   list-style: none;
-  transition: all .3s linear;
-  /* background-color: rgba(255, 0, 0, .1); */
+  transition: all .5s linear;
+  background-color: #e5e5e5;
   width: 90%;
   padding: 1em;
+
 }
 
 .navList.active {
   right: 0;
+  z-index: 99;
 }
 
 .navItem + .navItem {
@@ -44,6 +46,7 @@
     display: flex;
     align-items: center;
     font-size: 12px;
+    background-color: transparent;
   }
 
   .navItem + .navItem {

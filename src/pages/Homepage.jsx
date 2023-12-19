@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import MainNav from "../components/MainNav";
-import { FaClipboardList, FaSquareFacebook, FaUserGroup, FaXTwitter } from "react-icons/fa6";
-import { FaInstagramSquare } from "react-icons/fa";
+
 import { FiMonitor } from "react-icons/fi";
 
 import Slider from "../components/Slider";
-import StyledNavLink from "../components/StyledNavLink";
+import { FaClipboardList, FaUserGroup } from "react-icons/fa6";
+import Footer from "../components/Footer";
 
 function Homepage() {
 	return (
@@ -41,7 +41,7 @@ function Homepage() {
 						We promise you a new look and more importantly, a new attitude.
 					</p>
 					<section className="ourServices">
-						<Link to="" className="card">
+						<Link to="/hairstyles" className="card">
 							<section className="cardImg">
 								<FaUserGroup className="cardIcon" />
 							</section>
@@ -57,7 +57,7 @@ function Homepage() {
 							<div className="cardBoard rightBoarder"></div>
 							<div className="cardBoard bottomBoarder"></div>
 						</Link>
-						<Link to="" className="card">
+						<Link to="/appointments" className="card">
 							<section className="cardImg">
 								<FaClipboardList className="cardIcon" />
 							</section>
@@ -73,7 +73,7 @@ function Homepage() {
 							<div className="cardBoard rightBoarder"></div>
 							<div className="cardBoard bottomBoarder"></div>
 						</Link>
-						<Link to="" className="card">
+						<Link to="/my-appointments" className="card">
 							<section className="cardImg">
 								<FiMonitor className="cardIcon" />
 							</section>
@@ -106,52 +106,14 @@ function Homepage() {
 					</section>
 				</section>
 				<section className="contact">
+					<section className="contactContent">
+
 					<p>Wanna look stylish?</p>
-					<Link to="" className="cta">Contact Us</Link>
+					<Link to="/appointments" className="cta">Contact Us</Link>
+					</section>
 				</section>
 			</main>
-			<footer className="footer">
-				<section className="footerContent">
-				<StyledNavLink to="/" $brand $footer>
-					@touchByNoa
-				</StyledNavLink>
-				<ul>
-					<li className="">
-						<StyledNavLink to="/hairstyles" $footer>Hairstyles</StyledNavLink>
-					</li>
-					<li className="">
-						<StyledNavLink to="/my-appointments" $footer>My Appointments</StyledNavLink>
-					</li>
-					<li className="">
-						<StyledNavLink to="/sign-in" $footer>Signin</StyledNavLink>
-					</li>
-
-					<li className="">
-						<StyledNavLink to="/appointments" $cta $footer>
-							Book Appointments
-						</StyledNavLink>
-					</li>
-				</ul>
-					{/* socials */}
-					<ul className="socialList">
-						<li>
-							<a href="https://facebook.com" target="_blank" rel="noreferrer">
-							<FaSquareFacebook />
-							</a>
-						</li>
-						<li>
-							<a href="https://twitter.com" target="_blank" rel="noreferrer">
-							<FaXTwitter />
-							</a>
-						</li>
-						<li>
-							<a href="https://instagram.com" target="_blank" rel="noreferrer">
-							<FaInstagramSquare />
-							</a>
-						</li>
-					</ul>
-				</section>
-			</footer>
+			<Footer />
 		</>
 	);
 }

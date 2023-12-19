@@ -32,9 +32,6 @@ function MainNav() {
 				<Hamburger isActive={isActive} onHandleClick={handleClick} />
 
 				<ul className={`${styles.navList} ${isActive ? styles.active : ""}`}>
-					{/* <li className={styles.navItem}>
-						<StyledNavLink to="/">Home</StyledNavLink>
-					</li> */}
 					<li className={styles.navItem}>
 						<StyledNavLink to="/hairstyles">Hairstyles</StyledNavLink>
 					</li>

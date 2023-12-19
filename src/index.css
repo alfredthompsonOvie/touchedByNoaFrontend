@@ -27,6 +27,13 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+h1 {
+	color: #000;
+}
+.testimonialSubTitle {
+	color: #777;
+}
 ul {
   list-style: none;
 }
@@ -113,6 +120,12 @@ img {
 	grid-row: 1;
 	background-color: red;
 	position: relative;
+}
+.hero .cta {
+	color: #000;
+}
+.hero h1 {
+	color: #fff;
 }
 
 .heroImgContainer img {
@@ -201,7 +214,7 @@ img {
 .services {
 	grid-column: 2;
 	grid-row: 2;
-	padding: 1em 0;
+	padding: 3em 0;
 }
 
 .titleServiceContent {
@@ -222,7 +235,7 @@ img {
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	gap: 1em;
 	grid-template-rows: auto;
-	padding: 2em 0;
+	padding: 4em 0;
 }
 .card {
 	text-align: center;
@@ -289,6 +302,7 @@ img {
   flex-direction: column;
   align-items: center;
   font-size: 1rem;
+	text-align: center;
 }
 .testimonialSubTitle {
   letter-spacing: 4px;
@@ -312,9 +326,52 @@ img {
 .testimonialCards h1 {
   font-size: 2rem;
 }
+/* ========================contact============ */
+.contact{
+	grid-column: 1/-1;
+	grid-row: 4;
+	padding: 6em 0;
+	display: grid;
+	grid-template-columns: 0.5fr 11fr 0.5fr;
+	grid-template-rows: auto;
 
+	background-image: url("contactus.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-
+	color: #fff;
+	position: relative;
+}
+.contact::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.contactContent {
+	grid-column: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 4em;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+.contactContent p {
+	font-size: 2rem;
+}
+.contact .cta {
+	color: #000;
+}
+@media(min-width: 700px){
+	.contactContent{
+	flex-direction: row;
+	}
+}
 
 /* -------------------------------FOOTER------------------- */
 
@@ -330,18 +387,43 @@ img {
 .footerContent {
   grid-column: 2;
   grid-row: 1;
-  padding: 2em 0;
+  padding: 4em 0;
   display: flex;
   flex-direction: column;
   gap: 1em;
   align-items: center;
   justify-content: center;
 }
+.footer a {
+	font-size: 1rem;
+}
 
+.navItem + .navItem {
+	margin-top: .5em;
+}
+.navItem.navItemCta {
+	margin-top: 1em;
+}
 .socialList {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2em;
-  margin-top: 4em;
+  margin-top: 2em;
+}
+.footerIcon{
+	font-size: 1.5rem;
+}
+
+@media(min-width: 700px){
+	.footerContent{
+		flex-direction: row;
+		align-items: start;
+		justify-content: flex-start;
+	}
+
+	.socialList {
+		margin-top: 0em;
+		margin-left: auto;
+	}
 }

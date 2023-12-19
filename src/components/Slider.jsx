@@ -43,13 +43,21 @@ function Slider() {
 	return (
 		<swiper-container
 			ref={swiperElRef}
-			slides-per-view="3"
+			slides-per-view="1"
 			speed="500"
 			css-mode="true"
 			navigation="true"
       pagination="true"
       // breakpoints-640-slidesPerView="2"
-      // breakpoints-900-slidesPerView="3"
+			// breakpoints-900-slidesPerView="3"
+			breakpoints={{
+        640: {
+          slidesPerView: 2,
+        },
+        800: {
+          slidesPerView: 3,
+        },
+      }}
 		>
 			{testimonials.map((el) => (
 				<swiper-slide key={el.name}>

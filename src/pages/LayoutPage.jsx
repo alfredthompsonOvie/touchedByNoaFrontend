@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import Footer from "../components/Footer";
 import MainNav from "../components/MainNav";
 
 function LayoutPage({ children }) {
@@ -8,6 +9,7 @@ function LayoutPage({ children }) {
 			<main className="grid">
 				<section className="gridContent">{children}</section>
 			</main>
+			<Footer />
 		</>
 	);
 }
