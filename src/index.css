@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Whisper&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+
+
+
+
+:root {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Poppins", sans-serif;
+	color: #777777;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 0.5fr 11fr 0.5fr;
+
+	grid-template-rows: auto;
+}
+.gridContent {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.ham {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.hamRotate.active {
+	transform: rotate(45deg);
+}
+.hamRotate180.active {
+	transform: rotate(180deg);
+}
+.line {
+	fill: none;
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+	stroke: #000;
+	stroke-width: 5.5;
+	stroke-linecap: round;
+}
+.ham8 .top {
+	stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+	stroke-dasharray: 40 142;
+	transform-origin: 50%;
+	transition: transform 400ms;
+}
+.ham8 .bottom {
+	stroke-dasharray: 40 85;
+	transform-origin: 50%;
+	transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+	stroke-dashoffset: -64px;
+}
+.ham8.active .middle {
+	transform: rotate(90deg);
+}
+.ham8.active .bottom {
+	stroke-dashoffset: -64px;
+}
+
+.hamburgerBtn {
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+}
+.mainHome {
+	display: grid;
+	grid-template-columns: 0.5fr 11fr 0.5fr;
+	grid-template-rows: repeat(5, auto);
+}
+.hero {
+	grid-column: 1/-1;
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: calc(100vh - 5em);
+	color: #fff;
+}
+.heroImgContainer {
+	grid-column: 1;
+	grid-row: 1;
+	background-color: red;
+	position: relative;
+}
+
+.heroImgContainer img {
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+}
+
+.overlay {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 10;
+}
+
+.heroContent {
+	grid-row: 1;
+	grid-column: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5em;
+	padding: 0.5em;
+	position: relative;
+	z-index: 100;
+}
+.titleHero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+}
+.titleBookNow {
+	letter-spacing: 0.5em;
+	font-weight: 400;
+}
+.titleBrand {
+	font-family: "Arizonia", cursive;
+	font-size: 3em;
+}
+.brandDescription {
+	text-align: center;
+}
+.lineSeparator {
+	position: relative;
+
+	width: 100%;
+	text-align: center;
+	max-width: 20em;
+	width: 100%;
+	/* background-color: red; */
+}
+.lineSeparator::before,
+.lineSeparator::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 40%;
+	height: 2px;
+	background-color: #c5a47e;
+}
+.lineSeparator::before {
+	left: 0%;
+}
+.lineSeparator::after {
+	right: 0%;
+}
+
+.cta {
+	background-color: #eeedec;
+	color: #818080;
+	padding: 1em 1.5em;
+	border-radius: 8px;
+}
+.cta:hover {
+	background-color: #fff;
+}
+
+/* -----------------SERVICES----------------------- */
+
+.services {
+	grid-column: 2;
+	grid-row: 2;
+	padding: 1em 0;
+}
+
+.titleServiceContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.titleServices {
+	font-size: 3rem;
+}
+.servicesDescription {
+	margin-top: 1em;
+	text-align: center;
+}
+.ourServices {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 1em;
+	grid-template-rows: auto;
+	padding: 2em 0;
+}
+.card {
+	text-align: center;
+	padding: 1em;
+	/* border: 1px solid #000; */
+	border-radius: 8px;
+	/* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); */
+	position: relative;
+}
+.cardBoard {
+  content: "";
+	position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all .3s linear;
+}
+
+.topBoarder, .leftBoarder{
+  top: 0;
+  left: 0;
+}
+.leftBoarder, .rightBoarder {
+  width: 0px;
+  height: 0%;
+}
+.topBoarder, .bottomBoarder {
+  width: 0%;
+  height: 0px;
+}
+
+.bottomBoarder, .rightBoarder{
+  bottom: 0;
+  right: 0;
+}
+.card:hover .topBoarder, .card:hover .bottomBoarder {
+  width: 25%;
+  height: 2px;
+}
+.card:hover .leftBoarder, .card:hover .rightBoarder {
+  width: 2px;
+  height: 25%;
+}
+
+
+.cardIcon {
+	font-size: 5em;
+	color: #e78b90;
+}
+.cardHeading {
+	color: #000;
+	font-weight: 400;
+	font-size: 1.8em;
+}
+
+
+/* --------------------TESTIMONIAL--------------------- */
+.testimonials {
+  grid-column: 2;
+  grid-row: 3;
+  padding: 1em 0;
+}
+
+.titleTestimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+.testimonialSubTitle {
+  letter-spacing: 4px;
+}
+.testimonialTitleMain {
+  font-size: 3rem;
+}
+.slider {
+  margin: 3em 0;
+}
+.testimonialCards {
+  text-align: center;
+}
+.testimonialCards img {
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  object-position: center;
+  /* object-fit: contain; */
+}
+.testimonialCards h1 {
+  font-size: 2rem;
+}
+
+
+
+
+/* -------------------------------FOOTER------------------- */
+
+.footer {
+  grid-column: 1/-1;
+
+  display: grid;
+  grid-template-columns: 0.5fr 11fr 0.5fr;
+  grid-template-rows: auto;
+  background-color: #000;
+  color: #eeedec;
+}
+.footerContent {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-top: 4em;
+}
