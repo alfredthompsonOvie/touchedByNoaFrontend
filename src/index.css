@@ -335,7 +335,7 @@ img {
 	grid-template-columns: 0.5fr 11fr 0.5fr;
 	grid-template-rows: auto;
 
-	background-image: url("contactus.jpg");
+	background-image: url("/contactus.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
