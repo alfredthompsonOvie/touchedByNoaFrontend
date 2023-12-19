@@ -155,7 +155,7 @@ img {
 	gap: 1.5em;
 	padding: 0.5em;
 	position: relative;
-	z-index: 100;
+	z-index: 50;
 }
 .titleHero {
 	display: flex;
