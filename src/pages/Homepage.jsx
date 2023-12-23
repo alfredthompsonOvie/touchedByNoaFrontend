@@ -108,7 +108,7 @@ function Homepage() {
 				<section className="contact">
 					<section className="contactContent">
 
-					<p>Wanna look stylish?</p>
+					<p>Be attractive by choosing us</p>
 					<Link to="/appointments" className="cta">Contact Us</Link>
 					</section>
 				</section>
