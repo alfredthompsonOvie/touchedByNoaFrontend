@@ -1,18 +1,20 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { Heading } from "../components/ui/Heading";
 
 // import MainNav from "../components/MainNav"
 const StyledAppointments = styled.section`
-  max-width: 800px;
-  margin-inline: auto;
-`
+	max-width: 800px;
+	margin-inline: auto;
+`;
 
 function Appointments() {
-  return (
-    <StyledAppointments>
-      {/* <MainNav /> */}
-      Appointments
-    </StyledAppointments>
-  )
+	return (
+		<StyledAppointments>
+			
+			<Heading>YOUR APPOINTMENTS</Heading>
+
+		</StyledAppointments>
+	);
 }
 
-export default Appointments
+export default Appointments;

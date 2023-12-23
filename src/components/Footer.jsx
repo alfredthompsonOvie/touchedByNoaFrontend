@@ -2,6 +2,19 @@
 import { FaSquareFacebook, FaXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import StyledNavLink from "./StyledNavLink";
+import styled from "styled-components";
+
+
+const FooterContent = styled.section`
+background-color: #2C2C2C;
+`
+const Copyright = styled.section`
+background-color: #373737;
+text-align: center;
+`
+
+// icon FFBBA1
+// text 737373
 
 function Footer() {
 	return (
@@ -52,6 +65,9 @@ function Footer() {
 					</li>
 				</ul>
 			</section>
+			<Copyright>
+
+			</Copyright>
 		</footer>
 	);
 }
