@@ -1,41 +1,38 @@
 // import MainNav from "../components/MainNav"
 
-import { FaGoogle, FaLock, FaUserCircle } from "react-icons/fa"
-import { Link } from "react-router-dom"
+import {  FaLock, FaUserCircle } from "react-icons/fa"
+import { Heading } from "../components/ui/Heading"
+import { FormGroup, Input } from "../components/ui/FormElements"
+import GoogleAuth from "../components/ui/GoogleAuth"
+import { SectionSubmit } from "../components/ui/SectionSubmit"
+import { Button } from "../components/ui/Button"
 
 function Register() {
   return (
     <section>
-			<h1>sign up</h1>
+			<Heading $signin>sign up</Heading>
 
 			<form>
-				<section className="formGroup">
+				<FormGroup $signin>
 					<label htmlFor="email"></label>
-					<input type="email" name="email" id="" placeholder="Email" />
+					<Input type="email" name="email" id="" placeholder="Email" $signin/>
 					<FaUserCircle />
-				</section>
-				<section className="formGroup">
+				</FormGroup>
+				<FormGroup $signin>
 					<label htmlFor="password"></label>
-					<input type="password" name="password" id="" placeholder="Password" />
+					<Input type="password" name="password" id="" placeholder="Password" $signin/>
 					<FaLock />
-				</section>
-				<section className="formGroup">
+				</FormGroup>
+				<FormGroup $signin>
 					<label htmlFor="confirmPassword"></label>
-					<input type="password" name="confirmPassword" id="" placeholder="Confirm Password" />
+					<Input type="password" name="confirmPassword" id="" placeholder="Confirm Password" $signin/>
 					<FaLock />
-				</section>
-				<section>
-					<Link to="">Forgot Password?</Link>
-					<button type="submit">Login</button>
-				</section>
+				</FormGroup>
+				<SectionSubmit>
+					<Button type="submit" $login>sign up</Button>
+				</SectionSubmit>
 			</form>
-			<section>
-				<p>Or Sign Up with: </p>
-				<button>
-					<FaGoogle />
-					<span>Google</span>
-				</button>
-			</section>
+			<GoogleAuth />
 		</section>
   )
 }

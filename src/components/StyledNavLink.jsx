@@ -37,8 +37,8 @@ const StyledNavLink = styled(NavLink)`
 	${(props) =>
 		props.$brand &&
 		css`
-			font-family: "Whisper", cursive;
-			/* font-family: "Arizonia", cursive; */
+			/* font-family: "Whisper", cursive; */
+			font-family: "Arizonia", cursive;
 			font-size: 1.5rem;
 		`}
 	${(props) =>
