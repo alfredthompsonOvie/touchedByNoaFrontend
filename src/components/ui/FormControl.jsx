@@ -10,4 +10,19 @@ export const FormControl = styled.section`
     `}
   }
 
+
+
+
+
+
+  position: relative;
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		transform: translateY(-50%);
+		font-size: 1.2rem;
+		/* width: 2rem; */
+		color: #fbbaa1;
+	}
 `

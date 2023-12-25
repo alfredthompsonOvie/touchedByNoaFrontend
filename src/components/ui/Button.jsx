@@ -37,6 +37,14 @@ export const Button = styled.button`
 			font-size: .95rem;
 		
 		`}
+		${props=>props.$signup && css`
+			border-radius: 0;
+			/* width: initial; */
+			padding: .7em 2em;
+			font-size: .95rem;
+			width: 100%;
+		
+		`}
 		${props => props.$google && css`
 			font-size: 1rem;
 			text-align: center;

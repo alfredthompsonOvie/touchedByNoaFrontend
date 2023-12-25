@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FaGoogle } from "react-icons/fa";
 import { Button } from "./Button";
 import styled from "styled-components";
@@ -16,26 +17,36 @@ const P = styled.p`
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%);
-		opacity: .2;
+		opacity: 0.2;
 	}
 	span:last-child {
 		background-color: #fff;
 		display: inline-block;
 		position: relative;
-		padding: 0 .5em;
+		padding: 0 0.5em;
 	}
 `;
+const StyledAuth = styled.section`
+	
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	/* gap: 2em; */
+`
 
-function GoogleAuth() {
+function GoogleAuth({text}) {
 	return (
 		<section>
 			<P>
 				<span></span> <span>Or</span>
 			</P>
-			<Button $google>
-				<FaGoogle />
-				<span>Google</span>
-			</Button>
+			<StyledAuth>
+				<p>{text} with: </p>
+				<Button $google>
+					<FaGoogle />
+					<span>Google</span>
+				</Button>
+			</StyledAuth>
 		</section>
 	);
 }

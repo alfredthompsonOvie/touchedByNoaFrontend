@@ -9,6 +9,7 @@ import { FormGroup, Input } from "../components/ui/FormElements";
 import { Heading } from "../components/ui/Heading";
 import GoogleAuth from "../components/ui/GoogleAuth";
 import { SectionSubmit } from "../components/ui/SectionSubmit";
+import { FormControl } from "../components/ui/FormControl";
 
 
 
@@ -18,12 +19,12 @@ function Signin() {
 			<Heading $signin>sign in</Heading>
 
 			<form>
-				<FormGroup $signin>
+				<FormControl $signin>
 					<label htmlFor="email"></label>
 					<Input type="email" name="email" id="" placeholder="Email" $signin />
 					<FaUserCircle  />
-				</FormGroup>
-				<FormGroup $signin>
+				</FormControl>
+				<FormControl $signin>
 					<label htmlFor="password"></label>
 					<Input
 						type="password"
@@ -33,13 +34,13 @@ function Signin() {
 						$signin
 					/>
 					<FaLock/>
-				</FormGroup>
+				</FormControl>
 				<SectionSubmit>
 					<Link to="">Forgot Password?</Link>
 					<Button type="submit" $login>Login</Button>
 				</SectionSubmit>
 			</form>
-			<GoogleAuth />
+			<GoogleAuth text="Login"/>
 		</section>
 	);
 }
