@@ -62,6 +62,7 @@ function BookAppointment() {
 						<option value="hairStyles">Hair name</option>
 					</Select>
 				</FormGroup>
+				{/* have a timer */}
 				<FormGroup>
 					<label htmlFor="appointment-time"></label>
 					<Input

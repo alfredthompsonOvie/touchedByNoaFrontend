@@ -31,6 +31,7 @@ const SocialList = styled.ul`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 2em;
 	margin-top: 2em;
 
@@ -82,8 +83,13 @@ function Footer() {
 				</StyledNavLink>
 				<ul>
 					<NavItem className="navItem">
-						<StyledNavLink to="/hairstyles" $footer>
-							Hairstyles
+						<StyledNavLink to="/about-us" $footer>
+							About Us
+						</StyledNavLink>
+					</NavItem>
+					<NavItem className="navItem">
+						<StyledNavLink to="/services" $footer>
+							Services
 						</StyledNavLink>
 					</NavItem>
 					<NavItem className="navItem">
@@ -104,7 +110,7 @@ function Footer() {
 							$footer="1em"
 							$footercolor="#000"
 						>
-							Book Appointments
+							Book Appointment
 						</StyledNavLink>
 					</NavItem>
 				</ul>

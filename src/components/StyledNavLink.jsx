@@ -6,10 +6,10 @@ const StyledNavLink = styled(NavLink)`
 	color: #434547;
 	text-transform: uppercase;
 	opacity: 0.85;
-	padding: 1em 1.5em;
 	padding: 10px 20px;
 	text-align: left;
 	font-size: 12px;
+	transition: all 0.4s linear;
 
 	&.active {
 		color: #000;
@@ -28,6 +28,8 @@ const StyledNavLink = styled(NavLink)`
 			border-radius: 0.3em;
 			color: #fff;
 			margin-top: ${(props) => props.$footer};
+			opacity: 1;
+
 			&:hover {
 				color: #fff;
 				/* letter-spacing: 1px; */
@@ -39,7 +41,7 @@ const StyledNavLink = styled(NavLink)`
 		css`
 			/* font-family: "Whisper", cursive; */
 			font-family: "Arizonia", cursive;
-			font-size: 1.5rem;
+			font-size: clamp(1rem, 1vw, 1.5rem);
 		`}
 	${(props) =>
 		props.$footer &&
@@ -52,6 +54,26 @@ const StyledNavLink = styled(NavLink)`
 			}
 			&:hover {
 				color: ${(props) => props.$footercolor || "#e78b90"};
+			}
+		`}
+
+	${(props) =>
+		props.$ctaAbout &&
+		css`
+			color: #fff;
+			background-color: #e78b90;
+			display: inline-block;
+			text-align: center;
+			/* margin-inline: auto; */
+			margin-top: 1em;
+			padding: 1em 2em;
+			font-size: 1rem;
+			/* letter-spacing: 2px; */
+			opacity: 1;
+
+			&:hover {
+				background-color: #000;
+				color: #fff;
 			}
 		`}
 `;

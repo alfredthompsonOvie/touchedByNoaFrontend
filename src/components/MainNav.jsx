@@ -33,7 +33,10 @@ function MainNav() {
 
 				<ul className={`${styles.navList} ${isActive ? styles.active : ""}`}>
 					<li className={styles.navItem}>
-						<StyledNavLink to="/hairstyles">Hairstyles</StyledNavLink>
+						<StyledNavLink to="/about-us">About Us</StyledNavLink>
+					</li>
+					<li className={styles.navItem}>
+						<StyledNavLink to="/services">Services</StyledNavLink>
 					</li>
 					<li className={styles.navItem}>
 						<StyledNavLink to="/my-appointments">My Appointments</StyledNavLink>
@@ -44,7 +47,7 @@ function MainNav() {
 
 					<li className={styles.navItem}>
 						<StyledNavLink to="/appointments" $cta>
-							Book Appointments
+							Book Appointment
 						</StyledNavLink>
 					</li>
 				</ul>

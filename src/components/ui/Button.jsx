@@ -53,4 +53,16 @@ export const Button = styled.button`
 			}
 
 		`}
+
+		${props=>props.$appointment && css`
+			
+			width: 100%;
+			border-radius: 0;
+			padding: 1.2em;
+			grid-column: 1/-1;
+
+			&:hover {
+				background-color: #000;
+			}
+		`}
 `;

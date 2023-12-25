@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import Hairstyles from "./pages/Hairstyles";
+import Services from "./pages/Services";
 import Appointments from "./pages/Appointments";
 import Signin from "./pages/Signin";
 import Register from "./pages/Register";
@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import AuthLayout from "./pages/AuthLayout";
+import About from "./pages/About";
 
 function App() {
 	return (
@@ -20,7 +21,8 @@ function App() {
 			<Routes>
 				<Route index element={<Homepage />} />
 				<Route element={<LayoutPage />}>
-					<Route path="hairstyles" element={<Hairstyles />} />
+					<Route path="about-us" element={<About />} />
+					<Route path="services" element={<Services />} />
 					<Route path="my-appointments" element={<Appointments />} />
 					<Route  element={<AuthLayout />}>
 						<Route path="sign-in" element={<Signin />} />
